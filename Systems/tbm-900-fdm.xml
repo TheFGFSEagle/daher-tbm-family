@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+<fdm_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="tbm-900" version="2.0" release="ALPHA" xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+	<fileheader>
+		<author>TheFGFSEagle</author>
+		<filecreationdate>23 May 2023</filecreationdate>
+		<version>0.0.0</version>
+		<description>Models a TBM 900.</description>
+	</fileheader>
+	
+	<metrics>
+		<wingarea unit="FT2">193.7</wingarea>
+		<wingspan unit="FT">42.1</wingspan>
+		<wing_incidence unit="DEG">2</wing_incidence>
+		<chord unit="FT">4.95</chord>
+		<htailarea unit="FT2">52.52</htailarea>
+		<htailarm unit="FT">17.61</htailarm>
+		<vtailarea unit="FT2">33.28</vtailarea>
+		<vtailarm unit="FT">17.61</vtailarm>
+		
+		<location name="AERORP" unit="IN">
+			<x>211.32</x>
+			<y>0</y>
+			<z>0</z>
+		</location>
+		
+		<location name="EYEPOINT" unit="IN">
+			<x>33.81</x>
+			<y>-24</y>
+			<z>65</z>
+		</location>
+		
+		<location name="VRP" unit="IN">
+			<x>0</x>
+			<y>0</y>
+			<z>0</z>
+		</location>
+	</metrics>
+	<mass_balance>
+		<ixx unit="SLUG*FT2">6458.00</ixx>
+		<iyy unit="SLUG*FT2">5406.91</iyy>
+		<izz unit="SLUG*FT2">11747.72</izz>
+		<emptywt unit="LBS">4583</emptywt>
+		
+		<location name="CG" unit="IN">
+			<x>207.94</x>
+			<y>0</y>
+			<z>-10.57</z>
+		</location>
+		
+		<pointmass name="Payload">
+			<weight unit="LBS">0</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>207.9</x>
+				<y>0</y>
+				<z>-10.57</z>
+			</location>
+		</pointmass>
+	</mass_balance>
+	
+	<propulsion>
+		<engine file="PT6A-66D">
+			<feed>0</feed>
+			<thruster file="HC-E5N-3C">
+				<sense>1</sense>
+				<location unit="IN">
+					<x>36</x>
+					<y>0</y>
+					<z>0</z>
+				</location>
+				<orient unit="DEG">
+					<pitch>-2</pitch>
+					<roll>0</roll>
+					<yaw>2</yaw>
+				</orient>
+			</thruster>
+		</engine>
+		
+		<tank type="FUEL" number="0">
+			<location unit="IN">
+				<x>207.94</x>
+				<y>-100</y>
+				<z>-10.57</z>
+			</location>
+			<capacity unit="LBS">939.04</capacity>
+			<contents unit="LBS">469.52</contents>
+		</tank>
+		
+		<tank type="FUEL" number="1">
+			<location unit="IN">
+				<x>207.94</x>
+				<y>100</y>
+				<z>-10.57</z>
+			</location>
+			<capacity unit="LBS">939.04</capacity>
+			<contents unit="LBS">469.52</contents>
+		</tank>
+	</propulsion>
+	
+	<ground_reactions>
+		<contact type="BOGEY" name="NOSE">
+			<location unit="IN">
+				<x>54.94</x>
+				<y>0</y>
+				<z>-50.72</z>
+			</location>
+			<static_friction>0.8</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<rolling_friction>0.02</rolling_friction>
+			<spring_coeff unit="LBS/FT">5000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">600</damping_coeff>
+			<max_steer unit="DEG">20</max_steer>
+			<brake_group>NONE</brake_group>
+			<retractable>1</retractable>
+		</contact>
+		
+		<contact type="BOGEY" name="LEFT_MAIN">
+			<location unit="IN">
+				<x>216.26</x>
+				<y>-55.57</y>
+				<z>-50.72</z>
+			</location>
+			<static_friction>0.80</static_friction>
+			<dynamic_friction>0.50</dynamic_friction>
+			<rolling_friction>0.02</rolling_friction>
+			<spring_coeff unit="LBS/FT">8000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">800</damping_coeff>
+			<max_steer unit="DEG">0</max_steer>
+			<brake_group>LEFT </brake_group>
+			<retractable>1</retractable>
+		</contact>
+		
+		<contact type="BOGEY" name="RIGHT_MAIN">
+			<location unit="IN">
+				<x>216.26</x>
+				<y>55.57</y>
+				<z>-50.72</z>
+			</location>
+			<static_friction>0.80</static_friction>
+			<dynamic_friction>0.50</dynamic_friction>
+			<rolling_friction>0.02</rolling_friction>
+			<spring_coeff unit="LBS/FT">8000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">800</damping_coeff>
+			<max_steer unit="DEG">0</max_steer>
+			<brake_group>RIGHT </brake_group>
+			<retractable>1</retractable>
+		</contact>
+		
+		<contact type="STRUCTURE" name="LEFT_WING">
+			<location unit="IN">
+				<x>207.94</x>
+				<y>-252.60</y>
+				<z>-10.57</z>
+			</location>
+			<static_friction>1</static_friction>
+			<dynamic_friction>1</dynamic_friction>
+			<spring_coeff unit="LBS/FT">7394.00</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">7394.00</damping_coeff>
+		</contact>
+		
+		<contact type="STRUCTURE" name="RIGHT_WING">
+			<location unit="IN">
+				<x>207.94</x>
+				<y>252.6</y>
+				<z>-10.57</z>
+			</location>
+			<static_friction>1</static_friction>
+			<dynamic_friction>1</dynamic_friction>
+			<spring_coeff unit="LBS/FT">7394</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">7394</damping_coeff>
+		</contact>
+	</ground_reactions>
+	
+	<flight_control file="Systems/tbm-900-fcs.xml"/>
+	
+	<aerodynamics file="Systems/tbm-900-aerodynamics.xml"/>
+	
+	<external_reactions>
+	</external_reactions>
+</fdm_config>
