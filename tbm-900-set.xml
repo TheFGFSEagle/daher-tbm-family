@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<sim>
+		<description>Daher TBM 900</description>
+		<long-description>
+			The Daher TBM is a family of high-performance single-engine turboprop business and
+			utility light aircraft manufactured by Daher.
+			It was originally collaboratively developed between the American Mooney Airplane Company
+			and French light aircraft manufacturer SOCATA.
+		</long-description>
+		
+		<authors>
+			<author>
+				<description>3D, Systems, Nasal, Textures, Effects, FDM, GUI</description>
+				<nick>TheFGFSEagle</nick>
+				<email>thefgfseagle@gmail.com</email>
+			</author>
+		</authors>
+		
+		<aircraft-version>0.0.0</aircraft-version>
+		<status>alpha</status>
+		<minimum-fg-version>2020.4.0</minimum-fg-version>
+		
+		<rating>
+			<FDM type="int">0</FDM>
+			<systems type="int">0</systems>
+			<cockpit type="int">0</cockpit>
+			<model type="int">0</model>
+		</rating>
+		
+		<tags>
+			<tag>transport</tag>
+			<tag>utility</tag>
+			<tag>high-performance</tag>
+			<tag>business</tag>
+			<tag>daher</tag>
+			<tag>socata</tag>
+			<tag>low-wing</tag>
+			<tag>ifr</tag>
+			<tag>single-engine</tag>
+			<tag>retractable-gear</tag>
+			<tag>glass-cockpit</tag>
+			<tag>garmin</tag>
+		</tags>
+		
+		<urls>
+			<home-page>https://wiki.flightgear.org/Daher_TBM_family</home-page>
+			<wikipedia>https://en.wikipedia.org/wiki/SOCATA_TBM</wikipedia>
+			<code-repository>https://github.com/TheFGFSEagle/daher-tbm-family</code-repository>
+		</urls>
+		
+		<flight-model>jsb</flight-model>
+		<aero>Systems/tbm-900-fdm</aero>
+		<primary-set type="bool">true</primary-set>
+		
+		<model>
+			<path>Aircraft/daher-tbm-family/Models/tbm-900.xml</path>
+		</model>
+		
+		<view n="0">
+			<internal type="bool">true</internal>
+			<config>
+				<x-offset-m>-0.33</x-offset-m>
+				<y-offset-m>0.25</y-offset-m>
+				<z-offset-m>1.2</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg>95</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		<menubar include="gui/menubar.xml"/>
+	</sim>
+	
+	<limits>
+		<max-flap-extension-speed>
+			<flaps>0.333</flaps>
+			<speed>113</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed>
+			<flaps>1</flaps>
+			<speed>113</speed>
+		</max-flap-extension-speed>
+		<max-gear-extension-speed>113</max-gear-extension-speed>
+		<max-gear-operation-speed>113</max-gear-operation-speed>
+		<max-positive-g>3.8</max-positive-g>
+		<max-negative-g>-1.52</max-negative-g>
+		<vne>213</vne>
+		<mass-and-balance>
+			<maximum-ramp-mass-lbs>4830</maximum-ramp-mass-lbs>
+			<maximum-takeoff-mass-lbs>4830</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>4600</maximum-landing-mass-lbs>
+			<!--<maximum-zero-fuel-mass-lbs>3475.1</maximum-zero-fuel-mass-lbs>-->
+		</mass-and-balance>
+	</limits>
+</PropertyList>
+

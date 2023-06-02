@@ -1,2 +1,2 @@
-# DAHER TBM family
-The DAHER TBM aircraft implemented for FlightGear.
+# Daher TBM family
+The Daher TBM aircraft implemented for FlightGear.
