@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
 	<axis name="LIFT">
-		<function name="aero/force/Lift_propwash">
+		<!--<function name="aero/force/Lift_propwash">
 			<description>Delta lift due to propeller induced velocity</description>
 			<product>
 				<property>propulsion/engine[0]/thrust-coefficient</property>
@@ -19,7 +19,7 @@
 					</tableData>
 				</table>
 			</product>
-		</function>
+		</function>-->
 		
 		<function name="aero/force/Lift_alpha">
 			<description>Lift due to alpha</description>
@@ -31,7 +31,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-0.827046	-0.972295	-1.067324	-0.973488	-0.829165
 						-10.0	-0.464284	-0.510990	-0.573288	-0.511323	-0.464485
 						-5.0		-0.095252	-0.040635	-0.070918	-0.040454	-0.092591
 						0.0		0.272762	0.431901	0.436780	0.432607	0.274637
@@ -56,7 +55,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0		15.0		30.0
-						-15.0	7.341977	8.362285	8.767401	8.367195	7.435468
 						-10.0	7.820755	8.350912	8.697008	8.360878	7.809145
 						-5.0		7.798699	8.344605	8.718669	8.348499	7.719557
 						0.0		8.047183	8.456495	8.797491	8.466753	8.024544
@@ -112,7 +110,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.017902	0.018934	0.019766	0.018953	0.017940
 						-10.0	0.015999	0.015930	0.016035	0.015937	0.016009
 						-5.0		0.015360	0.015042	0.014854	0.015043	0.015359
 						0.0		0.016180	0.016349	0.016250	0.016353	0.016185
@@ -135,7 +132,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.088615	0.059590	0.049440	0.061995	0.091862
 						-10.0	0.068628	0.026555	0.016284	0.027642	0.071407
 						-5.0		0.050866	0.012305	0.001747	0.012136	0.051415
 						0.0		0.047534	0.016622	0.006104	0.015416	0.046483
@@ -192,7 +188,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.147578	0.086207	0			-0.086249	-0.146102
 						-10.0	0.161058	0.106943	0			-0.106960	-0.159505
 						-5.0		0.171722	0.113321	0			-0.113382	-0.171656
 						0.0		0.167379	0.108647	0			-0.108915	-0.167830
@@ -217,7 +212,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-0.205569	-0.301570	-0.261512	-0.301570	-0.205569
 						-10.0	-0.280181	-0.362123	-0.367918	-0.362123	-0.280181
 						-5.0		-0.273041	-0.350512	-0.399695	-0.350512	-0.273041
 						0.0		-0.260747	-0.323824	-0.350498	-0.323824	-0.260747
@@ -243,7 +237,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.109368	0.211831	0.201188	0.206996	0.164616
 						-10.0	0.127876	0.223643	0.229499	0.244267	0.145106
 						-5.0		0.141332	0.245428	0.262491	0.269731	0.172723
 						0.0		0.186094	0.284427	0.298477	0.293134	0.184996
@@ -269,7 +262,7 @@
 	</axis>
 	
 	<axis name="PITCH">
-		<function name="aero/moment/Pitch_propwash">
+		<!--<function name="aero/moment/Pitch_propwash">
 			<description>Pitch moment due to propeller induced velocity</description>
 			<product>
 				<property>propulsion/engine[0]/thrust-coefficient</property>
@@ -288,7 +281,7 @@
 					</tableData>
 				</table>
 			</product>
-		</function>
+		</function>-->
 		
 		<function name="aero/moment/Pitch_alpha">
 			<description>Pitch moment due to alpha</description>
@@ -299,17 +292,17 @@
 				<property>aero/alpha-rad</property>
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
-					<independentVar lookup="column">aero/beta-deg</independentVar>
+					<independentVar lookup="column">fcs/flap-pos-deg</independentVar>
 					<tableData>
-								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.118806	0.070448	0.150469	0.070448	0.118806
-						-10.0	0.152647	0.043614	0.131763	0.043614	0.152647
-						-5.0		0.132886	0.033814	0.137693	0.033814	0.132886
-						0.0		0.193595	0.051663	0.163635	0.051663	0.193595
-						5.0		0.187938	0.055169	0.210216	0.055169	0.187938
-						10.0	0.193830	0.069937	0.189755	0.069937	0.193830
-						15.0	0.128340	-0.066520	0.086876	-0.066520	0.128340
-						20.0	-0.095438	-0.156206	-0.123242	-0.156206	-0.095438
+								0			30
+						-10		0.22972		0.3401
+						-5		0.13642		0.3078
+						0		0.04202		0.1641
+						5		-0.05764	0.0783
+						10		-0.16228	-0.0347
+						15		-0.27987	-0.1749
+						20		-0.41906	-0.3291
+						25		-0.56023	-0.4793
 					</tableData>
 				</table>
 				<value>-1</value>
@@ -346,7 +339,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-19.953718	-23.138580	-23.532830	-23.138580	-19.953718
 						-10.0	-23.516303	-23.835293	-24.008363	-23.835293	-23.516303
 						-5.0		-23.003746	-24.348146	-24.605100	-24.348146	-23.003746
 						0.0		-24.199575	-25.107630	-25.210782	-25.107630	-24.199575
@@ -373,7 +365,7 @@
 	</axis>
 	
 	<axis name="ROLL">
-		<function name="aero/moment/Roll_differential_propwash">
+		<!--<function name="aero/moment/Roll_differential_propwash">
 			<description>Roll moment due to differential propwash</description>
 			<product>
 				<property>propulsion/engine[0]/thrust-coefficient</property>
@@ -383,7 +375,7 @@
 				<property>aero/alpha-rad</property>
 				<value>-12.7674</value>
 			</product>
-		</function>
+		</function>-->
 		
 		<function name="aero/moment/Roll_beta">
 			<description>Roll moment due to beta</description>
@@ -423,7 +415,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-0.410991	-0.414573	-0.344204	-0.414573	-0.410991
 						-10.0	-0.459202	-0.529633	-0.545035	-0.529633	-0.459202
 						-5.0		-0.458055	-0.535683	-0.565640	-0.535683	-0.458055
 						0.0		-0.459076	-0.534772	-0.575302	-0.534772	-0.459076
@@ -450,7 +441,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-0.044374	-0.033072	-0.035931	-0.033072	-0.044374
 						-10.0	-0.010263	0.019705	0.019880	0.019705	-0.010263
 						-5.0		0.049723	0.073471	0.077354	0.073471	0.049723
 						0.0		0.099438	0.128805	0.134996	0.128805	0.099438
@@ -469,7 +459,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
-				<property>fcs/left-aileron-pos-rad</property>
+				<property>fcs/aileron-pos-rad</property>
 				<table>
 					<independentVar lookup="row">velocities/mach</independentVar>
 					<tableData>
@@ -525,7 +515,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.027157	0.018795	0			-0.018795	-0.027157
 						-10.0	0.018181	0.014499	0			-0.014499	-0.018181
 						-5.0		0.012045	0.009904	0			-0.009904	-0.012045
 						0.0		0.006513	0.005368	0			-0.005368	-0.006513
@@ -552,7 +541,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	0.142244	0.172268	0.159218	0.172268	0.142244
 						-10.0	0.103196	0.133982	0.139931	0.133982	0.103196
 						-5.0		0.039212	0.060898	0.063205	0.060898	0.039212
 						0.0		-0.031928	-0.012047	-0.021078	-0.012047	-0.031928
@@ -578,7 +566,6 @@
 					<independentVar lookup="column">aero/beta-deg</independentVar>
 					<tableData>
 								-30.0		-15.0		0.0			15.0		30.0
-						-15.0	-0.053860	-0.097099	-0.102469	-0.097099	-0.053860
 						-10.0	-0.049969	-0.096336	-0.099822	-0.096336	-0.049969
 						-5.0		-0.054113	-0.095186	-0.095530	-0.095186	-0.054113
 						0.0		-0.060997	-0.095952	-0.092472	-0.095952	-0.060997
