@@ -316,10 +316,56 @@
 		<pure_gain name="fcs/left-spoiler-pos-deg">
 			<input>fcs/left-spoiler-pos-norm</input>
 			<gain>58</gain>
+			<output>/surface-positions/left-spoiler-deg</output>
 		</pure_gain>
+		<pure_gain name="fcs/left-spoiler-pos-rad">
+			<input>fcs/left-spoiler-pos-norm</input>
+			<gain>1.01229097</gain>
+		</pure_gain>
+		
 		<pure_gain name="fcs/right-spoiler-pos-deg">
 			<input>fcs/right-spoiler-pos-norm</input>
 			<gain>58</gain>
+			<output>/surface-positions/right-spoiler-deg</output>
 		</pure_gain>
+		<pure_gain name="fcs/right-spoiler-pos-rad">
+			<input>fcs/right-spoiler-pos-norm</input>
+			<gain>1.01229097</gain>
+		</pure_gain>
+	</channel>
+	
+	<channel name="Flaps">
+		<kinematic>
+			<input>fcs/flap-cmd-norm</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>10</position>
+					<time>3</time>
+				</setting>
+				<setting>
+					<position>38</position>
+					<time>10</time>
+				</setting>
+			</traverse>
+			<output>fcs/flap-pos-deg</output>
+			<output>/surface-positions/flaps-deg</output>
+		</kinematic>
+		
+		<aerosurface_scale>
+			<input>fcs/flap-pos-norm</input>
+			<domain>
+				<min>0</min>
+				<max>38</max>
+			</domain>
+			<range>
+				<min>0</min>
+				<max>1</max>
+			</range>
+			<output>fcs/flap-pos-norm</output>
+		</aerosurface_scale>
 	</channel>
 </flight_control>
