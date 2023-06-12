@@ -1,0 +1,26 @@
+Sref = 193.750000 
+Cref = 4.950000 
+Bref = 42.083330 
+X_cg = 13.650000 
+Y_cg = 0.000000 
+Z_cg = -0.250000 
+Mach = 0.200000 
+AoA = -10.000000, -5.000000, 0.000000, 5.000000, 10.000000, 15.000000, 20.000000 
+Beta = -30.000000, -15.000000, 0.000000, 15.000000, 30.000000 
+Vinf = 100.000000 
+Rho = 0.002377 
+ReCref = 10000000.000000 
+ClMax = -999.000000 
+MaxTurningAngle = -1.000000 
+Symmetry = NO 
+FarDist = -1.000000 
+NumWakeNodes = 64 
+WakeIters = 6 
+NumberOfControlGroups = 1 
+Rudder
+VStab_Surf0_Rudder
+1
+30
+Preconditioner = Matrix 
+Karman-Tsien Correction = N 
+Stability Type = 1 
