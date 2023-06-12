@@ -86,10 +86,13 @@
 		<max-negative-g>-1.52</max-negative-g>
 		<vne>213</vne>
 		<mass-and-balance>
-			<maximum-ramp-mass-lbs>4830</maximum-ramp-mass-lbs>
-			<maximum-takeoff-mass-lbs>4830</maximum-takeoff-mass-lbs>
-			<maximum-landing-mass-lbs>4600</maximum-landing-mass-lbs>
+			<maximum-ramp-mass-lbs>7430</maximum-ramp-mass-lbs>
+			<maximum-takeoff-mass-lbs>7394</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>7024</maximum-landing-mass-lbs>
 			<!--<maximum-zero-fuel-mass-lbs>3475.1</maximum-zero-fuel-mass-lbs>-->
+			<mac-start-in>180.6</mac-start-in>
+			<mac-end-in>240</mac-end-in>
+			<mac-length-in>59.4</mac-length-in>
 		</mass-and-balance>
 	</limits>
 </PropertyList>
